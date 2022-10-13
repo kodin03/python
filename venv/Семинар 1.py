@@ -43,10 +43,10 @@ y = int(input())
 if x == 0 and y == 0:
     print("Начало координат")
 if x > 0 and y > 0:
-    print("Первая")
+    print("Четверть: " + 1)
 elif x < 0 and y > 0:
-    print("Вторая")
+    print("Четверть: " + 2)
 elif x < 0 and y < 0:
-    print("Третья")
+    print("Четверть: " + 3)
 elif x > 0 and y < 0:
-    print("Четвертая")
+    print("Четверть: " + 4)
