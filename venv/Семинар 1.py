@@ -14,14 +14,39 @@ else:
 # Задача 1 про предикаты: Напишите программу для проверки истинности утверждения
 # ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 
+print()
 print("Задача про предикат: ")
 print("Введите предикаты: ")
 x = int(input())
 y = int(input())
 z = int(input())
-left = not(x or y or z)
-right = not x and not y and not z
-if left == right:
-    print("Истина")
+if (x > 1 or x < 0) or (y > 1 or y < 0) or (z > 1 or z < 0):
+    print("Введите числа 0 или 1 для проверки выражения")
 else:
-    print("Ложь")
+    left = not(x or y or z)
+    right = not x and not y and not z
+    if left == right:
+        print("Истина")
+    else:
+        print("Ложь")
+
+
+# Задача 2 про координаты: Напишите программу, которая принимает на вход координаты точки (X и Y),
+# причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка
+# (или на какой оси она находится).
+
+print()
+print("Задача про координаты: ")
+print("Введите две координаты: X и Y ")
+x = int(input())
+y = int(input())
+if x == 0 and y == 0:
+    print("Начало координат")
+if x > 0 and y > 0:
+    print("Первая")
+elif x < 0 and y > 0:
+    print("Вторая")
+elif x < 0 and y < 0:
+    print("Третья")
+elif x > 0 and y < 0:
+    print("Четвертая")
