@@ -24,8 +24,7 @@ fun(inp)
 print("Задача про пары чисел: ")
 inp = int(input("Введите количество чисел в списке: "))
 
-def inputData(inp):
-    numbers = []
+def multi(inp):
     answer = []
     n = 1
     print("Введите числа через пробел: ")
@@ -41,7 +40,7 @@ def inputData(inp):
                 answer.append(numbers[i] * numbers[len(numbers) - n])
                 n += 1
         elif len(numbers) % 2 == 0:
-            if i == len(numbers) - n - 1:    # 0 3   1 2  2 1
+            if i == len(numbers) - n - 1:
                 answer.append(numbers[i] * numbers[len(numbers) - n])
                 break
             elif i < n:
@@ -49,4 +48,30 @@ def inputData(inp):
                 n += 1
     print(f"Произведение парных чисел: {answer}")
 
-inputData(inp)
+multi(inp)
+
+# Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным
+# значением дробной части элементов.
+
+print("Задача про вещественные числа: ")
+inp = int(input("Введите количество чисел в списке: "))
+
+def difference(inp):
+    diff = 0
+    dec = 0
+    num = 0
+    decimal = []
+    print("Введите числа через пробел: ")
+    str1 = str(input())
+    numbers = [float(x) for x in str1.split(" ")]
+    for i in range(len(numbers)):
+        dec = divmod(numbers[i], 1)
+        num = round(list(dec)[1], 10)
+        decimal.append(num)
+
+    diff = abs(max(decimal) - min(decimal))
+    print(f"max: {max(decimal)}")
+    print(f"min: {min(decimal)}")
+    print(f"Разница дробной части max и min: {diff}")
+
+difference(inp)
