@@ -74,7 +74,7 @@ def difference(inp3):
     print(f"min: {min(decimal)}")
     print(f"Разница дробной части max и min: {diff}")
 
-difference(inp3)"""
+difference(inp3)
 
 # Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 
@@ -92,4 +92,22 @@ def dec_bin(inp4):
     res = ''.join(reversed(bin))
     print(f"Число в двоичном виде: {res}")
 
-dec_bin(inp4)
+dec_bin(inp4)"""
+
+# Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
+
+print("Задача про числа Фибоначчи: ")
+n = int(input("Введите число: "))
+
+def fibonacci(n):
+    square = 2 * n
+    fib = [1 for i in range(square + 1)]
+    fib[n] = 0
+    num = 1
+    for i in range(n + 2, square + 1):
+        num = -num
+        fib[i] = fib[i - 1] + fib[i - 2]
+        fib[square - i] = fib[i] * num
+    return fib
+
+print(f"Список чисел Фибоначчи: {fibonacci(n)}")
