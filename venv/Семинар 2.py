@@ -47,4 +47,4 @@ factorial(n)
 print("Задача про последовательность: ")
 n = int(input("Введите число: "))
 def func(n):
-    fun = (1 +\frac 1 n) ^ n
+    fun = (1 + frac 1 n) ^ n

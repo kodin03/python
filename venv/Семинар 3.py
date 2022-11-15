@@ -1,19 +1,18 @@
 import math
 # Задайте список из нескольких чисел. Напишите программу, которая найдёт сумму элементов списка, стоящих на нечётной позиции.
 
-'''print("Задача про нечетные числа: ")
+print("Задача про нечетные числа: ")
 inp1 = int(input("Введите количество чисел в списке: "))
 numbers = []
 
 def fun(inp1):
     summa = 0
     print("Введите числа через пробел: ")
-    str1 = str(input())
-    numbers = [int(x) for x in str1.split(" ")]
-
-    for i in range(len(numbers)):
-        if numbers[i] % 2 == 1:
-            summa += numbers[i]
+    input_numbers = str(input())
+    input_numbers = [int(x) for x in input_numbers.split(" ")]
+    for i in range(len(input_numbers)):
+        if input_numbers[i] % 2 == 1:
+            summa += input_numbers[i]
     print(f"Сумма нечетных элементов: {int(summa)}")
 
 fun(inp1)
@@ -48,7 +47,7 @@ def multi(inp2):
                 n += 1
     print(f"Произведение парных чисел: {answer}")
 
-multi(inp2)'''
+multi(inp2)
 
 # Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным
 # значением дробной части элементов.
