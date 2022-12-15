@@ -4,16 +4,7 @@ import re
 import itertools
 
 
-file1 = 'Задача 3.txt'
-file2 = 'Задача 3.2.txt'
-file_sum = 'Сумма многочленов.txt'
-
-# Получение данных из файла
-
-def read_file(file):
-    with open(str(file), 'r') as data:
-        f = data.read()
-    return f
+file1 = 'Задача 3.txt' return f
 #print(f"Считанный файл 1: {read_file(file1)}")
 #print(f"Считанный файл 2: {read_file(file2)}")
 
